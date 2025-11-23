@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="Images/bitmoji.png" type="image/icon">
+    <!-- Add Social Media icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Created by: Jason Ingham-->
+    <header>
+    <div class="container">
+      <h1>Home </h1>
+      <nav class = "nav-bar">
+        <ul>
+            <li><a class = "active" href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="Jason_Ingham_Resume.pdf">Resume</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+    </div>
+  </header>
+
+    <main id="home" class="container">
+        <h1 class = "intro"> Welcome, I am Jason Ingham</h1>
+        <h2> An Associate in <span class = "highlight">Computer Science</span></h2>
+        <img class = "computer-pic" src="Images/computer.png" alt="Computer Image">
+    </main>
+
+    <footer>
+        <div class="container">
+            <small> Created by Jason Ingham &copy;<span id="year"></span></small>
+        </div>
+        <div class="footer-socials">
+            <a href="https://x.com/JasonIngham24" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/jason-ingham-532119352/" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/@sov-hades7425" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/jason_ingham21/" class="fa fa-instagram"></a>
+            <a href="https://github.com/JasonIngham24" class="fa fa-github"></a>
+        </div>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+  </footer>
+</body>
+</html>

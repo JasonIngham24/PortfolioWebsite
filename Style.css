@@ -1,0 +1,353 @@
+/* ---------- Base layout & typography ---------- */
+:root {
+  --bg: #0f1221;
+  --panel: #171a2b;
+  --accent: #6ee7ff;
+  --text: #e8ecff;
+  --muted: #9aa4c7;
+  --card: #1c2140;
+  --card-border: #2b305a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif; /* (C) font-family */
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* ---------- Header / Nav ---------- */
+header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--card-border);
+}
+
+header h1 {
+  margin: 0.75rem 0 0.25rem;
+  letter-spacing: 0.5px;
+}
+
+/* get rid of the lines */
+a {
+    text-decoration: none;
+    /* change the color */
+    color: whitesmoke;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+}
+/* get rid of the bullets */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    background-color: var(--card);
+}
+/* Put everything on the same line */
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+/* Add style on action, i.e. hover */
+nav a:hover, .active {
+    background: darkcyan;
+    color: white;
+    box-shadow: 0px 7px 5px rgb(44, 61, 61);
+}
+/* Add General nav style */
+nav {
+    margin-top: 10px;
+    box-shadow: 0px 2px 5px cyan;
+}
+
+/* ---------- Index.html ---------- */
+/* ---------- HomePage Intro ---------- */
+#home .intro {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  font-size: 300%;
+}
+#home h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  font-size: 200%;
+}
+#home .highlight {
+  color: var(--accent);
+}
+
+#home .computer-pic {
+  display: block;
+  margin: 1rem auto;
+  max-width: 50%;
+}
+
+/* ---------- HomePage Socials ---------- */
+.socials {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.socials h4 {
+  margin-bottom: 1rem;
+  font-size: 150%;
+}
+
+/* ---------- Projects.html ---------- */
+/* ---------- ProjectsPage Intro ---------- */
+#projects h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+#projects .intro {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  max-width: 100ch;
+}
+
+/* ---------- Flexbox projects grid ---------- */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 1rem 0 2rem;
+}
+
+/* Card */
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  width: clamp(260px, 45%, 520px);
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.36);
+}
+
+.project-media {
+  margin: 0;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.12));
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.project-content {
+  padding: 1rem 1rem 0.75rem;
+}
+
+.project-content h3 {
+  margin: 0 0 0.35rem;
+}
+
+.project-content p {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+/* Actions */
+.project-actions {
+  padding: 0 1rem 1rem;
+  margin-top: auto;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #05111a;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  text-decoration: none;
+  transition: filter 120ms ease, transform 120ms ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* ---------- aboutMe.html ---------- */
+#about-me .container { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#about-me .bitmoji { 
+  grid-column: 1 / 2; 
+  grid-row: 1 / -1;
+  border-radius: 25%;
+  max-width: 80%;
+  margin: auto;
+  box-shadow: 0 10px 24px var(--accent);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+#about-me .intro { 
+  grid-column: 2 / 3; 
+  grid-row: 1 / 2;
+  text-align: center;
+}
+
+#about-me .hobbies{ 
+  grid-column: 2 / 3; 
+  grid-row: 2 / 3;
+  text-align: center;
+}
+
+#about-me .goals { 
+  grid-column: 2 / 3; 
+  grid-row: 3 / 4;
+  text-align: center;
+}
+
+/* ---------- Contact.html ---------- */
+#contact-me p {
+  color: var(--accent);
+  padding: 1rem;
+  max-width: 500px;
+  margin: 2rem;
+  font-size: 120%;
+}
+
+#contact-me ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #007bb5;
+  border-radius: 10px;
+  background-color: var(--card);
+}
+
+#contact-me li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #007bb5;
+}
+
+#contact-me .email, #contact-me .phone, #contact-me .linkedin, #contact-me .github {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+#contact-me li:last-child {
+  border-bottom: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--card-border);
+  background: var(--panel);
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+footer .container {
+  text-align: center;
+  padding-top: auto;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer-socials {
+    text-align: center;
+    margin: 1rem;
+    margin-right: auto;
+}
+
+.footer-socials a {
+    display: inline-block;
+    padding: 16px;
+    width: 60px;
+    text-align: center;
+}
+
+.footer-socials a:hover {
+    opacity: 0.9;
+    transform: translateY(-5px);
+    filter: brightness(1.5);
+}
+
+.fa-twitter {
+    background-color: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background-color: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background-color: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background-color: #125688;
+    color: white;
+}
+
+.fa-github {
+    background-color: #333333;
+    color: white;
+}
+
+/* -----------------------------
+   MEDIA QUERY for smaller screens
+   ----------------------------- */
+  @media (max-width: 700px) {
+    nav ul {
+        display: grid;                /* switch from inline to grid layout */
+        grid-template-columns: 1fr;   /* one column layout */
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;               /* make each link take up full width */
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* optional separator */
+    }
+
+    nav a {
+        display: block;               /* make link fill its li */
+        padding: 15px;
+    }
+  }

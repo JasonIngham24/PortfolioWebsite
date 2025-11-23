@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Images/bitmoji.png" type="image/icon">
+  <!-- Add Social Media icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!--Created by: Jason Ingham-->
+    <header>
+    <div class="container">
+      <h1>Contact Me</h1>
+      <nav class = "nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="Jason_Ingham_Resume.pdf">Resume</a></li>
+            <li><a class = "active" href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+    </div>
+  </header>
+
+  <Main id = contact-me class = "container">
+    <p>
+      You can reach me through the following methods:
+      <ul>
+        <li>Email: <span class="email">inghamj1@newpaltz.edu</span></li>
+        <li>Phone: <span class="phone">(123) 456-7890</span></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jason-ingham-532119352/"><span class="linkedin">linkedin</span></a></li>
+        <li>GitHub: <a href="https://github.com/JasonIngham24"><span class="github">github</span></a></li>
+      </ul>
+    </p>
+  </Main>
+
+  <footer>
+        <div class="container">
+            <small> Created by Jason Ingham &copy;<span id="year"></span></small>
+        </div>
+        <div class="footer-socials">
+            <a href="https://x.com/JasonIngham24" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/jason-ingham-532119352/" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/@sov-hades7425" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/jason_ingham21/" class="fa fa-instagram"></a>
+            <a href="https://github.com/JasonIngham24" class="fa fa-github"></a>
+        </div>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+  </footer>
+</body>
+</html>

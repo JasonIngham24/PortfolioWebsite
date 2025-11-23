@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Images/bitmoji.png" type="image/icon">
+  <!-- Add Social Media icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Projects Showcase</h1>
+      <nav class = "nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class = "active" href="projects.html">Projects</a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="Jason_Ingham_Resume.pdf">Resume</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main id="projects" class="container">
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title">Featured Projects</h2>
+      <p class="intro">A curated selection of achievements and creations across gaming, software, security, and storytelling.</p>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="Images/top500.png" alt="Screenshot of Marvel Rivals Top 500 leaderboard placement" />
+          </figure>
+          <div class="project-content">
+            <h3>Top 500 — Marvel Rivals</h3>
+            <p>Personal milestone: Achieved Top 500 on Marvel Rivals Ultron's Battle Matrix Protocol leaderboard. A snapshot of dedication, strategy, and teamwork.</p>
+            <div class="project-actions">
+              <a class="btn" href="Images/top500.png" target="_blank" rel="noopener">View Image</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="Images/Cyberlabs.png" alt="Stylized illustration representing cybersecurity labs and terminals" />
+          </figure>
+          <div class="project-content">
+            <h3>Cybersecurity Home Labs</h3>
+            <p>A repository of hands-on experiments, labs, and write-ups exploring key security concepts — from network analysis to incident response.</p>
+            <div class="project-actions">
+              <a class="btn" href="https://github.com/JasonIngham24/Cybersecurity_Home_Labs" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="Images/fibonacci-api.png" alt="Abstract Fibonacci spiral representing the sequence and API concept" />
+          </figure>
+          <div class="project-content">
+            <h3>Sum of Even Fibonacci Sequence — API</h3>
+            <p>An API that accepts an <em>n</em> value and computes the sum of the first <em>n</em> even Fibonacci numbers using a local compute system.</p>
+            <div class="project-actions">
+              <a class="btn" href="https://github.com/JasonIngham24/API_Project" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="Images/dnd-swashbuckler.png" alt="Artwork silhouette of a swashbuckler character with rapier" />
+          </figure>
+          <div class="project-content">
+            <h3>D&amp;D Character: Human Swashbuckler</h3>
+            <p>A character sketch and summary sheet for a Female Human Swashbuckler — background, abilities, roleplay hooks, and quick stats.</p>
+            <div class="project-actions">
+              <a class="btn" href="https://docs.google.com/document/d/1FF-n3yt7C8BDrhP7jaPyLoK7kVV5dHVZCkaQjtGynfM/edit?usp=sharing" target="_blank" rel="noopener">Open Document</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+        <div class="container">
+            <small> Created by Jason Ingham &copy;<span id="year"></span></small>
+        </div>
+        <div class="footer-socials">
+            <a href="https://x.com/JasonIngham24" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/jason-ingham-532119352/" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/@sov-hades7425" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/jason_ingham21/" class="fa fa-instagram"></a>
+            <a href="https://github.com/JasonIngham24" class="fa fa-github"></a>
+        </div>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+  </footer>
+</body>
+</html>
